@@ -1,0 +1,17 @@
+
+{
+	"bgposition01":{
+				"list":[
+					{"position":"0 -167px"},
+					{"position":"0 -190px"},
+					{"position":"0 -211px"}	
+				]	
+		},
+	"bgposition02":{
+				"list":[
+					{"position":"-30px -167px"},
+					{"position":"-28px -190px"},
+					{"position":"-32px -211px"}	
+				]			
+		}
+}

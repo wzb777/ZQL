@@ -1,0 +1,354 @@
+
+body{
+	background: #fff;
+}
+.det_con{
+	
+}
+/*跳转导航*/
+.det_con_crumbs{
+	font: 12px/32px SimSun;
+	color: #999;
+	height: 32px;
+}
+
+.det_con_crumbs i{
+	margin: 0 10px;
+}
+
+.det_con_inner{
+	border: 1px solid #ededed;
+	overflow: hidden;
+}
+
+.inner_1{
+	width: 1000px;
+}
+
+/*焦点图*/
+.det_shop_innerLeft{
+	padding: 10px 0 0 20px;
+}
+#box{
+	width: 400px;
+	height: 400px;
+	position: relative;
+}
+/*正常图*/
+.shop_imgbox{
+	position: relative;
+}
+/*隐藏模板*/
+.shop_imgbox_show{
+	z-index: 10;
+	position: absolute;
+	opacity: 0.5;
+	width: 200px;
+	height: 200px;
+	left: 0px;
+	top: 0px;
+	background: #fff;
+	cursor: crosshair;
+	display: none;
+}
+/*小图*/
+.shop_imgbox_min{
+	margin-left: 10px;
+}
+.shop_imgbox_min li{
+	float: left;
+	cursor: pointer;
+	margin: 0 12px;
+	border: 1px solid #fff;
+}
+.shop_imgbox_min .act{
+	border-color: #f33;
+}
+/*大图*/
+.shop_imgbox_max{
+	display: none;
+	width: 400px;
+	height: 400px;
+	position: absolute;
+	top: 0px;
+	right: -450px;
+	border: 2px solid #ddd;
+	background-color: #f0f;
+	overflow: hidden;
+	z-index: 9;
+}
+.shop_imgbox_max img{
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+/*分享*/
+.shop_share{
+	margin-left: 20px;
+}
+.shop_share a{
+	float: left;
+	position: relative;
+	margin: 0 15px 0 0;
+	padding: 0 0 0 20px;
+	line-height: 32px;
+	color: #666;
+}
+.shop_share i{
+	display: block;
+	position: absolute;
+	top: 5px;
+	left: 0;
+	width: 46px;
+	height: 22px;
+	opacity: 0.25;
+	background: url(../images/shop_share.png) no-repeat;
+}
+.shop_share a:first-child i{
+	background-position: -46px -290px;
+}
+.shop_share a:last-child i{
+	background-position: -46px -314px;
+}
+
+
+
+
+/*产品详情*/
+.det_shop_innerRight{
+	padding-top: 10px;
+	width: 530px;
+	overflow: hidden;
+}
+.det_shop_innerRight h3{
+	padding-top: 7px;
+	margin-bottom: 10px;
+	font-size: 16px;
+}
+.det_shop_innerRight h3 span{
+	display: block;
+	color: #999;
+	font-size: 14px;
+}
+/*倒计时*/
+.shop_grop1{
+	padding-right: 6px;
+	width: 532px;
+	height: 52px;
+	background: url(../images/shop_bg1.jpg);
+	line-height: 52px;
+	font-size: 14px;
+	color: #fff;
+	text-align: right;
+}
+
+.shop_grop1 span{
+	display: inline-block;
+	width: 24px;
+	height: 26px;
+	line-height: 26px;
+	border-radius: 2px;
+	background: #fff;
+	color: #f33;
+	margin: 0 5px;
+	vertical-align: middle;
+	text-align: center;
+}
+#second_time{
+	margin-right: 20px;
+}
+
+/*团购价*/
+.team_price{
+	padding: 5px 10px;
+	background: #f7f7f7;
+}
+.team_price span{
+	
+}
+.team_price_top,{
+	padding-right: 75px;
+	/*line-height: 30px;*/
+}
+.tpt_1,.tpb_1{
+	width: 65px;
+	height: 30px;
+	color: #999;
+	line-height: 30px;
+	display: inline-block;
+	padding: 2px 0;
+}
+.tpt_2{
+	color: #c00;
+	font-size: 14px;
+}
+.tpt_3{
+	color: #c00;
+	font-size: 30px;
+	font-weight: bold;
+	padding-right: 5px;
+}
+.tpt_4{
+	color: #999;
+	text-decoration: line-through;
+	margin: 0 10px;
+}
+.tpt_5{
+	display: inline-block;
+	height: 18px;
+	padding: 0 2px;
+	color: #fff;
+	background: #c00;
+	border-radius: 4px;	
+}
+.tpb_2{
+	height: 18px;
+	padding: 0 2px;
+	color: #fff;
+	background: #c00;
+	border-radius: 4px;	
+	margin-right: 10px;
+}
+
+/*配送商品*/
+.distribution_shop{
+	width: 550px;
+	padding: 10px;
+	border-bottom: 1px solid #999;
+}
+.distribution_shop p{
+	line-height: 42px;
+}
+.distribution_shop p span:first-child{
+	color: #999;
+}
+/*按钮*/
+.distribution_shop p em{
+	padding: 7px 20px 7px 6px;
+	line-height: 25px;
+	border: 1px solid #ccc;
+	cursor: pointer;
+	margin-right: 18px;
+}
+
+
+.distribution_shop p:nth-child(2) .pri{
+	color: #f33;
+	margin-left: 5px;
+}
+.distribution_shop p:nth-child(2) i{
+	color: #ccc;
+	margin: 0 12px;
+}
+
+
+
+/*团购商品*/
+.shop_tuan_box{
+	margin: 50px 0;
+	width: 530px;
+	padding: 6px 0;
+	background: #f7f7f7;
+	position: relative;
+}
+.shop_tuan_box h5{
+	color: #f33;
+	float: left;
+	margin: 0 20px 0 10px;
+	line-height: 50px;
+}
+.shop_tuan_box ul{
+	float: left;
+}
+.shop_tuan_box li{
+	margin-top: 7px;
+	width: 270px;
+	height: 30px;
+	line-height: 30px;
+	border: 1px solid #c00;
+	color: #000;
+}
+.shop_tuan_box li:nth-child(2){
+	display: none;
+}
+.shop_tuan_box li span{
+	padding: 3px 4px 3px 2px;
+	color: #fff;
+	background: #c33;
+	margin-left: 10px;
+}
+.shop_tuan_box button{
+	float: right;
+	border: 0;
+	background-color: #f7f7f7;
+	color: #999;
+	line-height: 36px;
+}
+.shop_tuan_box button i{
+	margin-left: 4px;
+	display: inline-block;
+	width: 14px;
+	height: 8px;
+	background: url(../images/shop_tuan_box.png) no-repeat;
+	background-position: 0 0;
+}
+
+
+/*购买商品*/
+.buy_shop{}
+.buy_shop_num {
+	height: 33px;
+	line-height: 33px;
+}
+.buy_shop_num span{
+	width: 70px;
+	color: #ccc;
+}
+.buy_shop_num1{
+	border: 1px solid #e6e6e6;
+}
+.buy_shop_num1 i{
+	height: 31px;
+	width: 30px;
+	background: #f8f8f8;
+	color: #ccc;
+	text-align: center;
+	cursor: pointer;
+}
+.buy_shop_num1 i:nth-child(even){
+	width: 48px;
+	background: #fff;
+	color: #000;
+	border-left: 1px solid #e6e6e6;
+	border-right: 1px solid #e6e6e6;
+}
+.buy_shop_num em{
+	margin-left: 10px;
+	color: #999;
+}
+
+.buy_shop .buy{
+	display: inline-block;
+	width: 140px;
+	height: 50px;
+	color: #fff;
+	background: #c00;
+	text-align: center;
+	font-size: 20px;
+	line-height: 50px;
+	margin: 35px 10px 35px 70px;
+}
+.buy_shop .join{
+	margin: 35px 0;
+	display: inline-block;
+	width: 138px;
+	height: 48px;
+	border: 1px solid #ffe1e1;
+	color: #d0002c;
+	background: #ffeded;
+	text-align: center;
+	font-size: 20px;
+	line-height: 50px;
+}
+

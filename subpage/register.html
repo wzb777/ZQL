@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>注册页面</title>
+		<link rel="stylesheet" type="text/css" href="../css/style.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/register.css"/>
+	</head>
+	<body>
+		<div class="header regWidth  clearfix">
+			<div class="logo fl">
+				<a href="#"><img src="../images/logo_130x60.png"/><p>中关村在线旗下网上商城</p></a>
+			</div>
+			<div class="register-bar fr">
+				已经有Z商城账号？<a href="login.html">立即登录</a>
+			</div>
+		</div>
+		<!--注册表单-->
+		<div class="content regWidth">
+			<div class="title">30秒快速注册，加入Z商城</div>
+			<form action="register.php" method="get" class="reg_form clearfix">
+				<div class="reg_form_left">
+					<ul class="tab clearfix">
+						<li><span>用手机号注册</span></li>
+					</ul>
+					<div class="verify">
+						<!--手机号-->
+						<div class="ipt">
+							<div class="label">
+								<em>*</em>手机号：
+							</div>
+							<input type="text" name="phone" id="phone" value="" />
+							<i></i>
+							<div class="tips">请填写手机号</div>
+						</div>
+						<!--密码-->
+						<div class="ipt">
+							<div class="label">
+								<em>*</em>密码：
+							</div>
+							<input type="password" name="psd" id="psd" value="" />
+							<i></i>
+							<div class="tips">6-16位字母和数字的组合，不可用特殊字符</div>
+						</div>
+						<!--确认密码-->
+						<div class="ipt">
+							<div class="label">
+								<em>*</em>确认密码：
+							</div>
+							<input type="password" name="upsd" id="upsd" value="" />
+							<i></i>
+							<div class="tips">再次输入密码</div>
+						</div>
+						<div class="agreement">
+							<input type="checkbox" name="" id="cok" value="" />同意<a href="#">《商城用户协议》</a><a href="#">《隐私权说明》</a>
+						</div>
+						<!--提交
+							
+						-->
+						<input type="submit" name="btn" id="btn" value="注册" />
+					</div>
+				</div>
+				<div class="reg_form_right">
+					<p>如果您已经注册，请<a href="#">直接登录</a>或者用以下方式登录：</p>
+					<div class="otherMethods">
+						<a href="#"></a>
+						<a href="#"></a>
+						<a href="#"></a>
+						<a href="#"></a>
+						<a href="#"></a>
+					</div>
+				</div>
+				<!--<input type="submit" value=""/>-->
+			</form>
+		</div>
+		<div class="footer">
+			<div class="foot regWidth clearfix">
+				<div class="about fl">
+					<a href="#">关于Z商城</a><span>|</span><a href="#">联系我们</a><span>|</span><a href="#">帮助中心</a>
+				</div>
+				<div class="copy fr">&copy;2018. 中关村在线 版权所有</div>
+			</div>
+		</div>
+	</body>
+</html>
+<script src="../js/jquery-1.11.1.min.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	var regForm=$(".reg_form");
+	var flag=false
+	phone()
+	function phone(){
+		$("#phone").blur(function(){
+			var reg=/^[1][3,4,5,7,8][0-9]{9}$/;
+			if($(this).val().length==0){
+				$(this).siblings("i").html("请填写手机号码").removeClass("iG")
+				flag=false
+			}else if(!reg.test($(this).val())){
+				$(this).siblings("i").html("请填写有效的11位手机号码").removeClass("iG")
+				flag=false
+			}else{
+				$(this).siblings("i").html("").addClass("iG")
+				flag=true;
+			}
+		})
+	}
+	psd()
+	function psd(){
+		$("#psd").blur(function(){
+			var reg=/^[0-9]*$/;  
+			var psdLen=$(this).val();
+			if(psdLen==""){
+				$(this).siblings("i").html("请填写密码").removeClass("iG")	
+				flag=false
+			}else if(psdLen.length<6||psdLen.length>16){
+				$(this).siblings("i").html("6-16位字符，可使用字母、数字或符号的组合").removeClass("iG")
+				flag=false
+			}else if(reg.test(psdLen)){
+				$(this).siblings("i").html("密码不能全是数字").removeClass("iG")
+				flag=false
+			}else{
+				$(this).siblings("i").html("").addClass("iG")
+				flag=true;
+			}
+			phone()
+			upsd()
+		})
+	}
+	upsd()
+	function upsd(){
+		$("#upsd").blur(function(){
+			if($(this).val()==""){
+				$(this).siblings("i").html("请填写确认密码").removeClass("iG")
+				flag=false
+			}else if($(this).val()!=$("#psd").val()){
+				$(this).siblings("i").html("两次填写的密码不一致").removeClass("iG")
+				flag=false
+			}else{
+				$(this).siblings("i").html("").addClass("iG")
+				flag=true;
+			}
+		})
+	}
+	$(".reg_form").submit(function(){
+		$("#phone").blur()
+		$("#psd").blur()
+		$("#upsd").blur()
+		if($("#cok[type='checkbox']").prop("checked")){
+			$("#phone").blur()
+			$("#psd").blur()
+			$("#upsd").blur()
+		}else{
+			flag=false;
+		}
+		return flag;
+	})
+</script>

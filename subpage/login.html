@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>登录页面</title>
+		<link rel="stylesheet" type="text/css" href="../css/style.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/register.css"/>
+	</head>
+	<body>
+		<div class="header regWidth  clearfix">
+			<div class="logo fl">
+				<a href="#"><img src="../images/logo_130x60.png"/><p>中关村在线旗下网上商城</p></a>
+			</div>
+			<div class="register-bar fr">
+				还没有有Z商城账号？<a href="register.html">立即注册</a>
+			</div>
+		</div>
+		<!--登录表单-->
+		<div class="login_all regWidth">
+			<form action="login.php" method="get" id="login_form" class="clearfix">
+				<div class="ad-div fl"><a href="#"><img src="../images/ad2_1.jpg"/></a></div>
+				<div class="login-layer fr">
+					<ul class="login_tab clearfix">
+						<li class="active">登录Z商城</li>
+						<li>商家登录</li>
+					</ul>
+					<div class="con list clearfix">
+						<div class="show">失败</div>
+						<input type="text" name="lo_phone" id="lo_phone" placeholder="手机号" value="" />
+						<input type="password" name="lo_psd" id="lo_psd" value="" placeholder="密码" />
+						<div class="oSpan">
+							<a href="#" class="fl dt">手机动态码登录</a>
+							<a href="#" class="fr mm">忘记密码？</a>
+						</div>
+						<input type="submit" value="登录" id="lo_bts"/>
+						<p>合作账号登录</p>
+						<div class="other">
+							<a href="#"></a>
+							<a href="#"></a>
+							<a href="#"></a>
+							<a href="#"></a>
+							<a href="#"></a>
+						</div>
+					</div>
+					<div class="cot list clearfix">
+						<input type="text" class="uname" placeholder="用户名" value="" />
+						<input type="password" class="psd" value="" placeholder="密码" />
+						<p><a href="#">忘记密码？</a></p>
+						<input type="" name="" class="btns" value="登录" />
+					</div>
+				</div>
+			</form>
+		</div>
+		<!--底部-->
+		<div class="footer">
+			<div class="foot regWidth clearfix">
+				<div class="about fl">
+					<a href="#">关于Z商城</a><span>|</span><a href="#">联系我们</a><span>|</span><a href="#">帮助中心</a>
+				</div>
+				<div class="copy fr">&copy;2018. 中关村在线 版权所有</div>
+			</div>
+		</div>
+			
+	</body>
+</html>
+<script src="../js/jquery-1.11.1.min.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	$(".login_tab li").click(function(){
+		$(this).addClass("active").siblings().removeClass("active");
+		$(".list").eq($(this).index()).css("display","block").siblings(".list").css("display","none")
+	})
+</script>

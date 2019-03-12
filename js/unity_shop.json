@@ -1,0 +1,38 @@
+[
+	{
+		"src":"unity_shop_1.jpg",
+		"pics":"￥2099.00",
+		"name":"荣耀 V10  64GB",
+		"price":"2219"
+	},
+	{
+		"src":"unity_shop_2.jpg",
+		"pics":"￥449.00",
+		"name":"录音师（LUYS） 7.1声道头戴式电竞游戏耳机",
+		"price":"399"
+	},
+	{
+		"src":"unity_shop_3.jpg",
+		"pics":"￥5099.00",
+		"name":"甲骨龙 酷睿 I5 8400 1050TI 4G独显 16G内存",
+		"price":"4799"
+	},
+	{
+		"src":"unity_shop_4.jpg",
+		"pics":"￥2999.00",
+		"name":"荣耀Play 64GB",
+		"price":"2749"
+	},
+	{
+		"src":"unity_shop_5.jpg",
+		"pics":"￥3799.00",
+		"name":"惠普14英寸窄边框轻薄影音娱乐本",
+		"price":"3449"
+	},
+	{
+		"src":"unity_shop_6.jpg",
+		"pics":"￥4499.00",
+		"name":"华硕15.6英寸性能级游戏战舰",
+		"price":"4099"
+	}
+]
